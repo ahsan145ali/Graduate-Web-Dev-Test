@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student List</title>
+  <!-- Added Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-4">
+    <h1>Student List</h1>
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Title</th>
+          <th>Email</th>
+          <th>Date of Birth</th>
+          <th>Subject 1</th>
+          <th>Subject 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr>
+          <td>{{ student['id'] }}</td>
+          <td>{{ student['first_name'] }}</td>
+          <td>{{ student['last_name'] }}</td>
+          <td>{{ student['title'] }}</td>
+          <td>{{ student['email'] }}</td>
+          <td>{{ student['dob'] }}</td>
+          <td>{{ student['subject1'] }}</td>
+          <td>{{ student['subject2'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
